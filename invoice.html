@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Momskart'invoice</title>
+
+  <style>
+    .invoice-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border: 1px solid #eee;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+      font-size: 16px;
+      line-height: 24px;
+      font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+      color: #555;
+    }
+
+    .invoice-box table {
+      width: 100%;
+      line-height: inherit;
+      text-align: left;
+    }
+
+    .invoice-box table td {
+      padding: 5px;
+      vertical-align: top;
+    }
+
+    .invoice-box table tr td:nth-child(2) {
+      text-align: right;
+    }
+
+    .invoice-box table tr.top table td {
+      padding-bottom: 20px;
+    }
+
+    .invoice-box table tr.top table td.title {
+      font-size: 45px;
+      line-height: 45px;
+      color: #333;
+    }
+
+    .invoice-box table tr.information table td {
+      padding-bottom: 40px;
+    }
+
+    .invoice-box table tr.heading td {
+      background: #eee;
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+    }
+
+    .invoice-box table tr.details td {
+      padding-bottom: 20px;
+    }
+
+    .invoice-box table tr.item td {
+      border-bottom: 1px solid #eee;
+    }
+
+    .invoice-box table tr.item.last td {
+      border-bottom: none;
+    }
+
+    .invoice-box table tr.total td:nth-child(2) {
+      border-top: 2px solid #eee;
+      font-weight: bold;
+    }
+
+    .below th {
+
+      border: 1px solid black;
+
+    }
+
+    .below td {
+
+      border: 1px solid black;
+
+    }
+
+    .below {
+      border-collapse: collapse;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .invoice-box table tr.top table td {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+
+      .invoice-box table tr.information table td {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    /** RTL **/
+    .rtl {
+      direction: rtl;
+      font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+
+    .rtl table {
+      text-align: right;
+    }
+
+    .rtl table tr td:nth-child(2) {
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="invoice-box">
+    <table cellpadding="0" cellspacing="0">
+      <tr class="top">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td class="title">
+                <img src="momskartpng.png" style="width:60%; max-width:200px;">
+              </td>
+
+              <td>
+                <div class="title " style="font-size:150%;font-weight:bold">Tax Invoice/Bill of Supply/Cash of Memo
+
+                </div>
+
+                <br>
+                <b>QR Code:</b>
+                <img src="qr.jpg" style="width:60%; max-width:200px;float:right">
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr class="information">
+        <td colspan="2">
+          <table>
+            <tr>
+              <td>
+                <b>Sold By:</b><br>
+                Cloudtail India Private Limited<br>
+                Prathamesh Complex, Building No. H, Opp.<br>
+                Vatika Restaurant, Mumbai - Nasik Highway No. 3,<br>
+                Bhiwandi By-pass Road
+                Bhiwandi, Maharashtra, 421302
+                IN
+                <br>
+                Sunnyville, CA 12345
+              </td>
+
+              <td>
+                <b>Billing Address:</b><br>
+                ABHINAV CONSTRUCTION<br>
+                Antim Mandloi<br>
+                68, Rameshwer Nagar<br>
+                KHANDWA, MADHYA PRADESH, 450001<br>
+                IN<br>
+                <b>GST Registration No:</b> 23ADUPK0642H1ZL <br><b>State/UT Code:</b> 23<br>
+
+
+
+
+
+
+
+              </td>
+            </tr>
+            <tr class="information">
+              <td colspan="2">
+                <table>
+                  <tr>
+                    <td>
+                      <b>PAN Number: </b>XXXXXXXXX<br>
+                      <b>GST Registeration Number: </b>XXXXXXXXX
+
+                    </td>
+
+                    <td>
+                      <b>Shipping Address:</b><br>
+                      ABHINAV CONSTRUCTION<br>
+                      Antim Mandloi<br>
+                      68, Rameshwer Nagar<br>
+                      KHANDWA, MADHYA PRADESH, 450001<br>
+                      IN<br>
+                      <b>GST Registration No:</b> 23ADUPK0642H1ZL <br><b>State/UT Code:</b> 23<br>
+                      <b>Place of supply: </b>MADHYA PRADESH <br>
+                      <b>Place of delivery: </b>MADHYA PRADESH<br>
+
+
+
+
+
+
+
+                    </td>
+                  </tr>
+                  <tr class="information">
+                    <td colspan="2">
+                      <table>
+                        <tr>
+                          <td>
+                            <b>Order Number: </b>XXXXXXXXX<br>
+                            <b>Order Dtae: </b>XXXXXXXXX
+
+                          </td>
+
+                          <td>
+
+                            <b>Invoice No:</b> 23ADUPK0642H1Z
+                            <b>Invoice details</b> 23<br>
+                            <b>Invoice date </b>12.01.2021 <br>
+
+
+
+
+
+
+
+                          </td>
+                        </tr>
+
+                      </table>
+                    </td>
+                  </tr>
+
+
+                  <table class="below">
+
+
+                    <tr style="background-color:#d3d3d3">
+                      <th>Sno.</th>
+                      <th>Description</th>
+                      <th>Unit Price</th>
+                      <th>Qty</th>
+                      <th>Net Amount</th>
+                      <th>Tax Rate</th>
+
+                      <th>Tax amount</th>
+                      <th>Total Amount</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Echo Dot (3rd Gen) – Smart speaker with Alexa (Black) |
+                        B07PFFMP9P ( B07PFFMP9P )
+                        HSN:8517
+                      </td>
+                      <td>
+                        ₹2,075.42
+                      </td>
+                      <td>
+
+                      1
+                      </td>
+
+                      <td>
+                        ₹2,075.42
+                      </td>
+                      <td>
+                        18%
+                      </td>
+                      <td>
+
+                        ₹373.58
+                      </td>
+                      <td>
+
+                        ₹2,449.00
+                      </td>
+                    </tr>
+
+                  </table>
